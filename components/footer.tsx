@@ -4,7 +4,7 @@ import { Button } from './ui/button'
 export default function Footer() {
   return (
     <footer className='py-4'>
-      <div className='text-muted-foreground container flex flex-col items-center justify-between gap-x-3 gap-y-1 text-center text-sm sm:flex-row'>
+      <div className='text-muted-foreground container flex max-w-7xl flex-col items-center justify-between gap-x-3 gap-y-1 text-center text-sm sm:flex-row'>
         <p>&copy;{new Date().getFullYear()} NextJs 16</p>
         <p>
           Template by{' '}
