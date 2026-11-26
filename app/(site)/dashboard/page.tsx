@@ -6,7 +6,7 @@ export default async function DashboardPage() {
 
   // Mock user data for demo purposes
   const userData = {
-    name: user?.firstName ? `${user.firstName} ${user.lastName}`.trim() : 'Demo User',
+    name: user?.fullName || 'Demo User',
     email: user?.emailAddresses[0]?.emailAddress || 'demo@example.com',
     plan: 'Pro Plan',
     usage: '2.4 GB / 10 GB',
