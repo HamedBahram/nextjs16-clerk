@@ -1,4 +1,4 @@
-import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs'
+import { Show, SignInButton } from '@clerk/nextjs'
 
 import Logo from '@/components/logo'
 import { Button } from '@/components/ui/button'
@@ -17,7 +17,7 @@ export default function Header() {
 
           <div className='flex items-center gap-4'>
             <ThemeToggle />
-            <SignedOut>
+            <Show when='signed-out'>
               <SignInButton>
                 <Button
                   size='sm'
@@ -32,10 +32,10 @@ export default function Header() {
                   <LogIn className='size-4' />
                 </Button>
               </SignInButton>
-            </SignedOut>
-            <SignedIn>
+            </Show>
+            <Show when='signed-in'>
               <ClerkUserButton />
-            </SignedIn>
+            </Show>
           </div>
         </div>
       </div>
